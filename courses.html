@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наші курси | Освітня платформа COURSE</title>
+    <meta name="description" content="Ознайомтеся з повним каталогом наших онлайн-курсів з дизайну та розробки. Знайдіть свій ідеальний курс.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🎓</span> <span class="logo__text">COURSE</span>
+                </a>
+
+                <button class="burger-btn" id="burgerBtn" aria-label="Відкрити меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul class="main-nav__list">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="#">Про нас</a></li>
+                        <li><a href="courses.html" class="active">Курси</a></li>
+                        <li><a href="#">Елементи</a></li>
+                        <li><a href="blog.html">Новини</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__action">
+                    <a href="#" class="btn btn-yellow">📞 Зателефонувати</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-banner">
+            <div class="container">
+                <h1>Наші курси</h1>
+                <p>Досліджуйте широкий спектр наших професійних онлайн-програм</p>
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <div class="container">
+                
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">Всі курси</button>
+                    <button class="filter-btn" data-filter="design">Дизайн</button>
+                    <button class="filter-btn" data-filter="development">Розробка</button>
+                </div>
+
+                <div class="courses-grid" id="coursesCatalogGrid"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-subscribe">
+                    <h3>Підпишіться на розсилку</h3>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Ваш Email" required>
+                        <button type="submit" class="btn btn-yellow">Підписатись</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo logo--footer">
+                        <span class="logo__icon">🎓</span> <span class="logo__text">COURSE</span>
+                    </a>
+                    <p class="footer-desc">Сучасна освітня платформа для отримання затребуваних ІТ-професій. Навчаємо з нуля до результату.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Меню</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="courses.html">Курси</a></li>
+                        <li><a href="blog.html">Новини</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакти</h4>
+                    <p class="footer-contact-item">📍 вулиця Хрещатик, 22, Київ</p>
+                    <p class="footer-contact-item">📞 +380 000 00 00</p>
+                    <p class="footer-contact-item">✉️ info@course-platform.ua</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 COURSE. Всі права захищені. Курсова робота.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-window">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Закрити вікно">×</button>
+            <div class="modal-header">
+                <h2>Залишити заявку</h2>
+                <p>Заповніть форму, і наш менеджер зв'яжеться з вами найближчим часом.</p>
+            </div>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group">
+                    <label for="userName">Ваше ім'я *</label>
+                    <input type="text" id="userName" name="name" required placeholder="Введіть ім'я">
+                </div>
+                <div class="form-group">
+                    <label for="userPhone">Номер телефону *</label>
+                    <input type="tel" id="userPhone" name="phone" required placeholder="+380 (XX) XXX-XX-XX">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" name="email" placeholder="example@mail.com">
+                </div>
+                <button type="submit" class="btn btn-yellow form-submit-btn">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

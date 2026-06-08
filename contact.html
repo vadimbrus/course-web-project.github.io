@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | Освітня платформа COURSE</title>
+    <meta name="description" content="Зв'яжіться з нами для отримання консультації щодо вибору онлайн-курсів. Наша адреса, телефон та форма зворотного зв'язку.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🎓</span> <span class="logo__text">COURSE</span>
+                </a>
+
+                <button class="burger-btn" id="burgerBtn" aria-label="Відкрити меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul class="main-nav__list">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="#">Про нас</a></li>
+                        <li><a href="courses.html">Курси</a></li>
+                        <li><a href="#">Елементи</a></li>
+                        <li><a href="blog.html">Новини</a></li>
+                        <li><a href="contact.html" class="active">Контакти</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__action">
+                    <a href="#" class="btn btn-yellow">📞 Зателефонувати</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-banner">
+            <div class="container">
+                <h1>Зв'яжіться з нами</h1>
+                <p>Звертайтеся до нас із будь-якими запитаннями або по підтримку</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                
+                <div class="contact-grid">
+                    
+                    <div class="contact-info-block">
+                        <h2>Надіслати нам повідомлення</h2>
+                        <p class="contact-subtitle">Є запитання щодо навчання або потрібна допомога у виборі курсу? Напишіть нам, і ми відповімо якомога швидше.</p>
+                        
+                        <form class="contact-page-form" id="contactPageForm">
+                            <div class="form-group">
+                                <label for="contactName">Ваше ім'я *</label>
+                                <input type="text" id="contactName" required placeholder="Введіть ім'я">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Ваш Email *</label>
+                                <input type="email" id="contactEmail" required placeholder="example@mail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Повідомлення *</label>
+                                <textarea id="contactMessage" rows="5" required placeholder="Ваше запитання..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-yellow contact-submit-btn">Надіслати повідомлення</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-details-block">
+                        <h2>Наш офіс</h2>
+                        
+                        <div class="details-list">
+                            <div class="detail-item">
+                                <span class="detail-icon">📍</span>
+                                <div>
+                                    <h3>Адреса</h3>
+                                    <p>вулиця Хрещатик, 22, Київ, 02000</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">📞</span>
+                                <div>
+                                    <h3>Телефон</h3>
+                                    <p>+380 000 00 00</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">✉️</span>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>info@course-platform.ua</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-wrapper">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.6405786482126!2d30.52183307619211!3d50.44773828740529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce507b0b6703%3A0x89921da8a670498a!2z0YPQuy4g0KXRgNC10YnQsNGC0LjQuiwgMjIsINCa0QuQtdCyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1717517000000!5m2!1suk!2sua" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Місцезнаходження офісу Course на карті">
+                            </iframe>
+                        </div>
+
+                    </div>
+
+                </div></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-subscribe">
+                    <h3>Підпишіться на розсилку</h3>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Ваш Email" required>
+                        <button type="submit" class="btn btn-yellow">Підписатись</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo logo--footer">
+                        <span class="logo__icon">🎓</span> <span class="logo__text">COURSE</span>
+                    </a>
+                    <p class="footer-desc">Сучасна освітня платформа для отримання затребуваних ІТ-професій. Навчаємо з нуля до результату.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Меню</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="courses.html">Курси</a></li>
+                        <li><a href="blog.html">Новини</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакти</h4>
+                    <p class="footer-contact-item">📍 вулиця Хрещатик, 22, Київ</p>
+                    <p class="footer-contact-item">📞 +380 000 00 00</p>
+                    <p class="footer-contact-item">✉️ info@course-platform.ua</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 COURSE. Всі права захищені. Курсова робота.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-window">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Закрити вікно">×</button>
+            <div class="modal-header">
+                <h2>Залишити заявку</h2>
+                <p>Заповніть форму, і наш менеджер зв'яжеться з вами найближчим часом.</p>
+            </div>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group">
+                    <label for="userName">Ваше ім'я *</label>
+                    <input type="text" id="userName" name="name" required placeholder="Введіть ім'я">
+                </div>
+                <div class="form-group">
+                    <label for="userPhone">Номер телефону *</label>
+                    <input type="tel" id="userPhone" name="phone" required placeholder="+380 (XX) XXX-XX-XX">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" name="email" placeholder="example@mail.com">
+                </div>
+                <button type="submit" class="btn btn-yellow form-submit-btn">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

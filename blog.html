@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини та Блог | Освітня платформа COURSE</title>
+    <meta name="description" content="Корисні статті про веб-розробку, дизайн та тренди в онлайн-освіті. Читайте наш блог.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🎓</span> <span class="logo__text">COURSE</span>
+                </a>
+
+                <button class="burger-btn" id="burgerBtn" aria-label="Відкрити меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul class="main-nav__list">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="#">Про нас</a></li>
+                        <li><a href="courses.html">Курси</a></li>
+                        <li><a href="#">Елементи</a></li>
+                        <li><a href="blog.html" class="active">Новини</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__action">
+                    <a href="#" class="btn btn-yellow">📞 Зателефонувати</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-banner">
+            <div class="container">
+                <h1>Наш блог та новини</h1>
+                <p>Будьте в курсі останніх трендів в освіті та технологіях</p>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-grid">
+                    
+                    <article class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="7.jpg" alt="Online Course Career" class="blog-img-1">
+                            <div class="blog-card__date">04 <span>Чер</span></div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3>Як вибрати правильний онлайн-курс для вашої кар'єри</h3>
+                            <p>Вибір правильного напрямку в навчанні — це 50% успіху вашої майбутньої кар'єри. Розбираємо основні критерії, на які варто звернути увагу при виборі онлайн-програми, щоб не шкодувати про витрачений час.</p>
+                            <a href="#" class="blog-card__link">Читати далі →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="8.jpg" alt="UI/UX Design Trends" class="blog-img-2">
+                            <div class="blog-card__date">28 <span>Тра</span></div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3>Майбутнє UI/UX дизайну: тренди, які вам потрібно знати у 2026 році</h3>
+                            <p>Світ дизайну інтерфейсів змінюється з шаленою швидкістю. Штучний інтелект, 3D-елементи та мінімалізм диктують нові правила. Дізнайтеся, які навички будуть затребувані роботодавцями цього року.</p>
+                            <a href="#" class="blog-card__link">Читати далі →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="9.jpg" alt="JavaScript Frameworks" class="blog-img-3">
+                            <div class="blog-card__date">15 <span>Тра</span></div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3>5 найкращих JavaScript-фреймворків для початківців у фронтенді</h3>
+                            <p>Починаєте свій шлях у веб-розробці і не знаєте, за що взятися після HTML та CSS? Порівнюємо популярні бібліотеки та фреймворки, щоб ви могли зробити свідомий вибір для свого першого комерційного проєкту.</p>
+                            <a href="#" class="blog-card__link">Читати далі →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="10.jpg" alt="Home Education Tips" class="blog-img-4">
+                            <div class="blog-card__date">02 <span>Тра</span></div>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3>12 лайфхаків для ефективного навчання вдома, коли навколо багато факторів</h3>
+                            <p>Дистанційна освіта вимагає залізної самодисципліни. Котики, соцмережі та домашні справи постійно відволікають від кодингу чи дизайну. Ми зібрали найкращие працюючі техніки тайм-менеджменту, які допоможуть вам тримати фокус під час занять.</p>
+                            <a href="#" class="blog-card__link">Читати далі →</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-subscribe">
+                    <h3>Підпишіться на розсилку</h3>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Ваш Email" required>
+                        <button type="submit" class="btn btn-yellow">Підписатись</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo logo--footer">
+                        <span class="logo__icon">🎓</span> <span class="logo__text">COURSE</span>
+                    </a>
+                    <p class="footer-desc">Сучасна освітня платформа для отримання затребуваних ІТ-професій. Навчаємо з нуля до результату.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Меню</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="courses.html">Курси</a></li>
+                        <li><a href="blog.html">Новини</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакти</h4>
+                    <p class="footer-contact-item">📍 вулиця Хрещатик, 22, Київ</p>
+                    <p class="footer-contact-item">📞 +380 000 00 00</p>
+                    <p class="footer-contact-item">✉️ info@course-platform.ua</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 COURSE. Всі права захищені. Курсова робота.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-window">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Закрити вікно">×</button>
+            <div class="modal-header">
+                <h2>Залишити заявку</h2>
+                <p>Заповніть форму, і наш менеджер зв'яжеться з вами найближчим часом.</p>
+            </div>
+            <form class="modal-form" id="callbackForm">
+                <div class="form-group">
+                    <label for="userName">Ваше ім'я *</label>
+                    <input type="text" id="userName" name="name" required placeholder="Введіть ім'я">
+                </div>
+                <div class="form-group">
+                    <label for="userPhone">Номер телефону *</label>
+                    <input type="tel" id="userPhone" name="phone" required placeholder="+380 (XX) XXX-XX-XX">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" name="email" placeholder="example@mail.com">
+                </div>
+                <button type="submit" class="btn btn-yellow form-submit-btn">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

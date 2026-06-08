@@ -1,0 +1,943 @@
+/* ==========================================================================
+   1. СКИДАННЯ СТИЛІВ ТА БАЗОВІ НАЛАШТУВАННЯ (Reset / Base)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #1a1a1a;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-yellow {
+    background-color: #ffb606;
+    color: #fff;
+}
+
+.btn-yellow:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.btn-dark {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background-color: #ffb606;
+    color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 30px;
+    border-bottom: 3px solid #ffb606;
+}
+
+/* ==========================================================================
+   2. ШАПКА САЙТУ (Header)
+   ========================================================================== */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo__icon {
+    font-size: 28px;
+}
+
+.logo__text {
+    font-weight: 900;
+    font-size: 22px;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+/* Навігація */
+.main-nav__list {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.main-nav__list a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.main-nav__list a:hover,
+.main-nav__list a.active {
+    color: #ffb606;
+}
+
+/* Бургер-меню */
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   3. ПРОМО-СЕКЦІЯ ТА ПОСЛУГИ (Hero & Services)
+   ========================================================================== */
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg');
+    background-color: #2b2b2b;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.highlight {
+    background-color: #ffb606;
+    padding: 0 10px;
+    color: #1a1a1a;
+}
+
+.hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-feature-card {
+    background-color: rgba(26, 26, 26, 0.8);
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* Секція послуг */
+.services-section {
+    padding: 60px 0;
+    background-color: #fcfcfc;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid #eee;
+}
+
+.service-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ==========================================================================
+   4. СІТКА КУРСІВ (Courses Grid & Cards)
+   ========================================================================== */
+.courses-section {
+    padding: 60px 0;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card__img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ідеально вписує картинку, обрізаючи зайве по краях */
+    object-position: center; /* Центрує зображення всередині блоку */
+    display: block;
+}
+
+.course-card__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-card__content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.course-card__content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.course-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.course-card__author {
+    font-size: 13px;
+    color: #999;
+}
+
+.course-card__price {
+    font-weight: 700;
+    color: #ffb606;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   5. СЕКЦІЯ РЕЄСТРАЦІЇ ТА ПОШУКУ (Register & Search)
+   ========================================================================== */
+.register-search-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-block {
+    background-color: #ffb606;
+    padding: 60px 20px;
+    color: #1a1a1a;
+    text-align: center;
+    flex: 1;
+}
+
+.register-block h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.discount-badge {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.register-block p {
+    margin-bottom: 25px;
+}
+
+.search-block {
+    background-color: #2b2b2b;
+    padding: 60px 20px;
+    color: #fff;
+    flex: 1;
+}
+
+.search-block h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.search-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-form input {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   6. СЛАЙДЕР ВІДГУКІВ ТА ПІДВАЛ (Testimonials & Footer)
+   ========================================================================== */
+.testimonials-section {
+    background-color: #1a1a1a;
+    padding: 60px 0;
+    color: #fff;
+}
+
+.slider-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 0 40px;
+}
+
+.slide-text {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.slide-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.author-avatar {
+    font-size: 40px;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.slider-arrow {
+    background: transparent;
+    border: 1px solid #ffb606;
+    color: #ffb606;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.slider-arrow:hover {
+    background-color: #ffb606;
+    color: #1a1a1a;
+}
+
+/* Підвал */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding-top: 60px;
+    border-top: 1px solid #2b2b2b;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #2b2b2b;
+    margin-bottom: 40px;
+}
+
+.footer-subscribe {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-subscribe h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.logo--footer .logo__text {
+    color: #fff;
+}
+
+.footer-desc {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffb606;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ffb606;
+}
+
+.footer-contact-item {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+/* ==========================================================================
+   7. МОДАЛЬНЕ ВІКНО (Modal HTML/CSS UI)
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-window {
+    background-color: #fff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-header p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #ffb606;
+}
+
+.form-submit-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   8. ВНУТРІШНІ СТОРІНКИ (Каталог, Блог, Контакти, 404)
+   ========================================================================== */
+.page-title-banner {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.page-title-banner h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.page-title-banner p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Фільтри каталогу */
+.catalog-section {
+    padding: 60px 0;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #ffb606;
+    border-color: #ffb606;
+    color: #fff;
+}
+
+/* БЛОГ */
+.blog-section {
+    padding: 60px 0;
+    background-color: #fcfcfc;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.blog-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.blog-card__img {
+    height: 220px;
+    background-color: #eaeaea;
+    position: relative;
+    width: 100%;
+}
+
+.blog-card__date {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: #ffb606;
+    color: #fff;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.blog-card__date span {
+    display: block;
+    font-size: 18px;
+}
+
+.blog-card__content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-card__content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.blog-card__content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.blog-card__link {
+    text-decoration: none;
+    color: #ffb606 !important;
+    font-weight: 700;
+    font-size: 14px;
+    align-self: flex-start;
+}
+
+/* КОНТАКТИ */
+.contact-section {
+    padding: 60px 0;
+    background-color: #fcfcfc;
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contact-info-block h2, .contact-details-block h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contact-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-page-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-page-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.contact-page-form textarea:focus {
+    border-color: #ffb606;
+}
+
+.contact-submit-btn {
+    align-self: flex-start;
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    display: flex;
+    gap: 15px;
+}
+
+.detail-icon {
+    font-size: 22px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.detail-item h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.detail-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.map-wrapper {
+    border: 1px solid #eee;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.map-wrapper iframe {
+    display: block;
+}
+
+/* СТОРІНКА 404 */
+.error-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.error-page-content {
+    max-width: 500px;
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: 900;
+    color: #ffb606;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.error-page-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.error-page-content p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   9. АДАПТИВНІСТЬ ТА АДАПТИВНІ МЕДІА-ЗАПИТИ (Media Queries)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .main-nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: #fff;
+        transition: left 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+
+    .main-nav.open {
+        left: 0;
+    }
+
+    .main-nav__list {
+        flex-direction: column;
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .burger-btn {
+        display: flex;
+    }
+    
+    .burger-btn.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .burger-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-btn.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .header__action {
+        display: none;
+    }
+    
+    .subscribe-form {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .register-search-section {
+        flex-direction: row;
+    }
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-grid {
+        flex-direction: row;
+    }
+    .contact-info-block {
+        flex: 1.2;
+    }
+    .contact-details-block {
+        flex: 0.8;
+    }
+}
