@@ -1,13 +1,8 @@
-/**
- * КУРСОВА РОБОТА: Основний скрипт сайту "COURSE"
- * Чистий Vanilla JS без сторонніх бібліотек
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================================================
-    // 1. ДАНІ КУРСІВ (Масив об'єктів з українізованим текстом та твоїми картинками)
-    // ==========================================================================
+   
     const coursesData = [
         { 
             title: "Повний практичний посібник з дизайну", 
@@ -59,13 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // ==========================================================================
-    // 2. ДИНАМІЧНИЙ ВИВІД КУРСІВ ТА ФІЛЬТРАЦІЯ (DOM-маніпуляції)
-    // ==========================================================================
+   
     const homeContainer = document.getElementById('coursesGrid');
     const catalogContainer = document.getElementById('coursesCatalogGrid');
 
-    // Функція генерації HTML-структури для кожної картки
+   
     function generateCoursesHTML(courses) {
         let htmlContent = '';
         courses.forEach(course => {
@@ -89,13 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return htmlContent;
     }
 
-    // Вивід 3-х популярних курсів на Головній сторінці (index.html)
+   
     if (homeContainer) {
         const popularCourses = coursesData.slice(0, 3);
         homeContainer.innerHTML = generateCoursesHTML(popularCourses);
     }
 
-    // Вивід усіх курсів та фільтрація на сторінці каталогу (courses.html)
+    
     if (catalogContainer) {
         catalogContainer.innerHTML = generateCoursesHTML(coursesData);
 
@@ -117,9 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================================================
-    // 3. ФУНКЦІОНАЛ МОБІЛЬНОГО МЕНЮ ("BURGER MENU")
-    // ==========================================================================
+   
     const burgerBtn = document.getElementById('burgerBtn');
     const mainNav = document.getElementById('mainNav');
 
@@ -138,9 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================================================
-    // 4. МОДАЛЬНЕ ВІКНО З ФУНКЦІОНАЛОМ "MISS CLICK"
-    // ==========================================================================
+   
     const modalOverlay = document.getElementById('modalOverlay');
     const closeModalBtn = document.getElementById('modalCloseBtn');
     const openModalBtnHeader = document.querySelector('.header__action .btn-yellow');
@@ -164,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (openModalBtnHeader) openModalBtnHeader.addEventListener('click', openModal);
     if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
 
-    // Закриття вікна при кліку на затемнену область навколо форми (Miss Click)
+    
     if (modalOverlay) {
         modalOverlay.addEventListener('click', (e) => {
             if (e.target === modalOverlay) {
@@ -173,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Закриття модального вікна кнопкою Escape
+    
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
             closeModal();
@@ -189,9 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================================================
-    // 5. ФУНКЦІОНАЛ СЛАЙДЕРА ВІДГУКІВ
-    // ==========================================================================
+    
     let currentSlide = 0;
     const slides = document.querySelectorAll('.custom-slide');
     const nextBtn = document.getElementById('slideNext');
@@ -219,9 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentSlide);
     }
 
-    // ==========================================================================
-    // 6. ОБРОБКА ФОРМИ НА СТОРІНЦІ КОНТАКТІВ
-    // ==========================================================================
+    
     const contactPageForm = document.getElementById('contactPageForm');
     if (contactPageForm) {
         contactPageForm.addEventListener('submit', (e) => {
