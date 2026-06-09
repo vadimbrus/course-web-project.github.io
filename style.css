@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. СКИДАННЯ СТИЛІВ ТА БАЗОВІ НАЛАШТУВАННЯ (Reset / Base)
-   ========================================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,7 +25,7 @@ img {
     display: block;
 }
 
-/* Кнопки */
+
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -84,9 +82,7 @@ img {
     border-bottom: 3px solid #ffb606;
 }
 
-/* ==========================================================================
-   2. ШАПКА САЙТУ (Header)
-   ========================================================================== */
+
 .header {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -120,7 +116,7 @@ img {
     letter-spacing: 1px;
 }
 
-/* Навігація */
+
 .main-nav__list {
     display: flex;
     list-style: none;
@@ -140,7 +136,7 @@ img {
     color: #ffb606;
 }
 
-/* Бургер-меню */
+
 .burger-btn {
     display: none;
     flex-direction: column;
@@ -159,9 +155,7 @@ img {
     transition: all 0.3s ease;
 }
 
-/* ==========================================================================
-   3. ПРОМО-СЕКЦІЯ ТА ПОСЛУГИ (Hero & Services)
-   ========================================================================== */
+
 .hero-section {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg');
     background-color: #2b2b2b;
@@ -202,7 +196,7 @@ img {
     font-size: 15px;
 }
 
-/* Секція послуг */
+
 .services-section {
     padding: 60px 0;
     background-color: #fcfcfc;
@@ -239,9 +233,7 @@ img {
     color: #666;
 }
 
-/* ==========================================================================
-   4. СІТКА КУРСІВ (Courses Grid & Cards)
-   ========================================================================== */
+
 .courses-section {
     padding: 60px 0;
 }
@@ -265,8 +257,8 @@ img {
 .course-card__img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ідеально вписує картинку, обрізаючи зайве по краях */
-    object-position: center; /* Центрує зображення всередині блоку */
+    object-fit: cover; 
+    object-position: center; 
     display: block;
 }
 
@@ -321,9 +313,7 @@ img {
     font-size: 16px;
 }
 
-/* ==========================================================================
-   5. СЕКЦІЯ РЕЄСТРАЦІЇ ТА ПОШУКУ (Register & Search)
-   ========================================================================== */
+
 .register-search-section {
     display: flex;
     flex-direction: column;
@@ -380,9 +370,7 @@ img {
     font-size: 15px;
 }
 
-/* ==========================================================================
-   6. СЛАЙДЕР ВІДГУКІВ ТА ПІДВАЛ (Testimonials & Footer)
-   ========================================================================== */
+
 .testimonials-section {
     background-color: #1a1a1a;
     padding: 60px 0;
@@ -439,7 +427,7 @@ img {
     color: #1a1a1a;
 }
 
-/* Підвал */
+
 .footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -531,9 +519,7 @@ img {
     color: #666;
 }
 
-/* ==========================================================================
-   7. МОДАЛЬНЕ ВІКНО (Modal HTML/CSS UI)
-   ========================================================================== */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -615,9 +601,7 @@ img {
     margin-top: 10px;
 }
 
-/* ==========================================================================
-   8. ВНУТРІШНІ СТОРІНКИ (Каталог, Блог, Контакти, 404)
-   ========================================================================== */
+
 .page-title-banner {
     background-color: #1a1a1a;
     color: #fff;
@@ -635,7 +619,7 @@ img {
     font-size: 14px;
 }
 
-/* Фільтри каталогу */
+
 .catalog-section {
     padding: 60px 0;
 }
@@ -663,7 +647,7 @@ img {
     color: #fff;
 }
 
-/* БЛОГ */
+
 .blog-section {
     padding: 60px 0;
     background-color: #fcfcfc;
@@ -748,7 +732,7 @@ img {
     align-self: flex-start;
 }
 
-/* КОНТАКТИ */
+
 .contact-section {
     padding: 60px 0;
     background-color: #fcfcfc;
@@ -839,7 +823,7 @@ img {
     display: block;
 }
 
-/* СТОРІНКА 404 */
+
 .error-page-wrapper {
     min-height: 100vh;
     display: flex;
@@ -874,9 +858,7 @@ img {
     margin-bottom: 30px;
 }
 
-/* ==========================================================================
-   9. АДАПТИВНІСТЬ ТА АДАПТИВНІ МЕДІА-ЗАПИТИ (Media Queries)
-   ========================================================================== */
+
 @media (max-width: 768px) {
     .main-nav {
         position: fixed;
